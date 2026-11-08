@@ -71,6 +71,6 @@ What surprised me most was how often "Gym Hero" appeared. I also ran one experim
 
 I learned that a recommender can feel smart even when it is just adding up a few points. Simple rules like "genre matches" and "energy is close" were enough to give results that made sense. The biggest surprise was "Gym Hero" showing up for pop and rock users. It showed me how one heavy rule, like genre, can shape the whole list.
 
-I used an AI assistant to help write the code and explain errors. I still had to check its work. When I ran the app, I hit errors in the starter's `main.py`, and the profile keys had to match what my scoring code expected. I ran the tests myself (2 passed), compared the results to my own sense of what fits each profile, and restored the original weights after my experiment. I would not trust the output without running it.
+I used an AI assistant to help explain errors. I still had to check its work. When I ran the app, I hit errors in the starter's `main.py`, and the profile keys had to match what my scoring code expected. I ran the tests myself (2 passed), compared the results to my own sense of what fits each profile, and restored the original weights after my experiment. I would not trust the output without running it.
 
 Next I would add more features, like danceability and acousticness, and more songs. This also changed how I think about music apps. When an app keeps recommending the same kind of song, it may be because its rules weigh one thing too much, and a user with an unusual taste can get ignored.
