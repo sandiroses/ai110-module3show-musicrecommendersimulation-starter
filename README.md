@@ -149,7 +149,33 @@ Because: energy closeness (+0.95)
 
 ## Experiments You Tried
 
-(to fill in)
+**Experiment: weight shift.** I cut the genre points from +2.0 to +1.0 and doubled the energy points (up to +2.0), then ran all 4 profiles again.
+
+What changed:
+- **High-Energy Pop:** "Summer Streets" (reggaeton, happy) moved from #3 to #2, and "Gym Hero" dropped from #2 to #3. Gym Hero only matched on genre and energy. Summer Streets matched on mood and energy, so once genre was worth less it moved ahead.
+- **Chill Lofi and Deep Intense Rock:** the top 5 stayed in the same order. Their best songs matched on everything, so the weights didn't matter.
+- **Edge Case (High Energy + Sad):** "Sunday Porch" was still #1, but its score dropped from 3.40 to 2.80. The other four were still just loud songs that aren't sad.
+
+Result: the change made the recommendations different, not more accurate. "Summer Streets" isn't really a better pick for a pop fan than "Gym Hero," it just moved up because energy now counts more.
+
+Pop profile with the new weights:
+
+```
+Sunrise City - Score: 3.94
+Because: genre match (+1.0), mood match (+1.0), energy closeness (+1.94)
+
+Summer Streets - Score: 2.90
+Because: mood match (+1.0), energy closeness (+1.90)
+
+Gym Hero - Score: 2.84
+Because: genre match (+1.0), energy closeness (+1.84)
+
+Rooftop Lights - Score: 2.82
+Because: mood match (+1.0), energy closeness (+1.82)
+
+Bassline Riot - Score: 2.00
+Because: energy closeness (+2.00)
+```
 
 ---
 
