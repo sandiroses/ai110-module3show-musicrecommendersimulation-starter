@@ -177,11 +177,19 @@ Bassline Riot - Score: 2.00
 Because: energy closeness (+2.00)
 ```
 
+I changed the weights back to the original after this experiment.
+
 ---
 
 ## Limitations and Risks
 
-(to fill in)
+- It only uses genre, mood, and energy. It ignores tempo, valence, danceability, and acousticness.
+- Genre and mood have to match exactly, so "indie pop" doesn't count as "pop."
+- The catalog is small (18 songs), and most genres only have one song. The rock profile only has one real rock song, so the rest of its list is loud songs from other genres.
+- Genre is worth the most, so "Gym Hero" keeps showing up for pop users even when it isn't the right mood.
+- It can't handle conflicting tastes. The sad, high-energy profile got a quiet folk song as its top pick.
+
+See the [Model Card](model_card.md) for more detail.
 
 ---
 
@@ -189,4 +197,6 @@ Because: energy closeness (+2.00)
 
 See [**Model Card**](model_card.md).
 
-(to fill in)
+I learned that a recommender can turn simple data into predictions by adding up points. It compares what a user says they like (genre, mood, energy) to features of each song, gives every song a score, and sorts the list. Even with only three rules, the results felt like real recommendations, which surprised me.
+
+Bias can show up when one rule counts too much or when the data is small. My genre rule is worth the most, so it kept pushing "Gym Hero" to the top for pop and rock users. Genres with only one or two songs also get fewer good options, and users with unusual or mixed tastes can get ignored. Real apps have the same problems at a much bigger scale, because their rules and data decide who gets good recommendations.
