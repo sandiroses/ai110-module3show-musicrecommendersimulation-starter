@@ -2,121 +2,86 @@
 
 ## Project Summary
 
-In this project you will build and explain a small music recommender system.
-
-Your goal is to:
-
-- Represent songs and a user "taste profile" as data
-- Design a scoring rule that turns that data into recommendations
-- Evaluate what your system gets right and wrong
-- Reflect on how this mirrors real world AI recommenders
-
-Replace this paragraph with your own summary of what your version does.
+This is a small music recommender that runs in the terminal. It reads songs from a CSV file, scores each song against a user's taste profile, and prints the top 5 songs with the reasons for each score.
 
 ---
 
 ## How The System Works
 
-Explain your design in plain language.
+Real apps like Spotify use collaborative filtering (what similar users liked) and content-based filtering (song features like genre and energy). My version only uses content-based filtering, since I don't have data about other users. It cares about genre most, then mood, then energy.
 
-Some prompts to answer:
+- **Song features:** genre, mood, energy, tempo_bpm, valence, danceability, acousticness (my scoring only uses genre, mood, and energy)
+- **UserProfile:** favorite_genre, favorite_mood, target_energy, likes_acoustic (not used in scoring yet)
 
-- What features does each `Song` use in your system
-  - For example: genre, mood, energy, tempo
-- What information does your `UserProfile` store
-- How does your `Recommender` compute a score for each song
-- How do you choose which songs to recommend
+**Algorithm Recipe:**
 
-You can include a simple diagram or bullet list if helpful.
+- +2.0 points for a genre match
+- +1.0 point for a mood match
+- Up to +1.0 point for energy: `1 - |song energy - target energy|`
+
+Every song gets a score, then the songs are sorted from highest to lowest and the top 5 are returned with their reasons.
+
+**Expected bias:** genre is worth the most, so the system may ignore great songs from other genres that match the mood and energy.
 
 ---
 
 ## Getting Started
 
-### Setup
-
-1. Create a virtual environment (optional but recommended):
+1. Create a virtual environment:
 
    ```bash
    python -m venv .venv
-   source .venv/bin/activate      # Mac or Linux
    .venv\Scripts\activate         # Windows
+   source .venv/bin/activate      # Mac or Linux
+   ```
 
-2. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the app:
-
-```bash
-python -m src.main
-```
-
-### Running Tests
-
-Run the starter tests with:
-
-```bash
-pytest
-```
-
-You can add more tests in `tests/test_recommender.py`.
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run the app: `python -m src.main`
+4. Run tests: `python -m pytest`
 
 ---
 
 ## Sample Recommendation Output
 
-Paste a sample of your recommender's output here as a text block so a reader can see what it produces:
+Profile: favorite_genre = pop, favorite_mood = happy, target_energy = 0.8
 
 ```
-# e.g.:
-# User profile: genre=indie, mood=chill, energy=low
-# Recommendations:
-#   1. ...
-#   2. ...
-#   3. ...
-```
+Loaded songs: 10
 
-**Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
+Top recommendations:
+
+Sunrise City - Score: 3.98
+Because: genre match (+2.0), mood match (+1.0), energy closeness (+0.98)
+
+Gym Hero - Score: 2.87
+Because: genre match (+2.0), energy closeness (+0.87)
+
+Rooftop Lights - Score: 1.96
+Because: mood match (+1.0), energy closeness (+0.96)
+
+Night Drive Loop - Score: 0.95
+Because: energy closeness (+0.95)
+
+Storm Runner - Score: 0.89
+Because: energy closeness (+0.89)
+```
 
 ---
 
 ## Experiments You Tried
 
-Use this section to document the experiments you ran. For example:
-
-- What happened when you changed the weight on genre from 2.0 to 0.5
-- What happened when you added tempo or valence to the score
-- How did your system behave for different types of users
+(to fill in)
 
 ---
 
 ## Limitations and Risks
 
-Summarize some limitations of your recommender.
-
-Examples:
-
-- It only works on a tiny catalog
-- It does not understand lyrics or language
-- It might over favor one genre or mood
-
-You will go deeper on this in your model card.
+(to fill in)
 
 ---
 
 ## Reflection
 
-Read and complete `model_card.md`:
+See [**Model Card**](model_card.md).
 
-[**Model Card**](model_card.md)
-
-Write 1 to 2 paragraphs here about what you learned:
-
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
-
-
-
+(to fill in)
