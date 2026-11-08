@@ -68,6 +68,85 @@ Because: energy closeness (+0.95)
 
 ---
 
+## Profile Test Results
+
+```
+Loaded songs: 18
+
+=== High-Energy Pop ===
+
+Sunrise City - Score: 3.97
+Because: genre match (+2.0), mood match (+1.0), energy closeness (+0.97)
+
+Gym Hero - Score: 2.92
+Because: genre match (+2.0), energy closeness (+0.92)
+
+Summer Streets - Score: 1.95
+Because: mood match (+1.0), energy closeness (+0.95)
+
+Rooftop Lights - Score: 1.91
+Because: mood match (+1.0), energy closeness (+0.91)
+
+Bassline Riot - Score: 1.00
+Because: energy closeness (+1.00)
+
+
+=== Chill Lofi ===
+
+Library Rain - Score: 4.00
+Because: genre match (+2.0), mood match (+1.0), energy closeness (+1.00)
+
+Midnight Coding - Score: 3.93
+Because: genre match (+2.0), mood match (+1.0), energy closeness (+0.93)
+
+Focus Flow - Score: 2.95
+Because: genre match (+2.0), energy closeness (+0.95)
+
+Spacewalk Thoughts - Score: 1.93
+Because: mood match (+1.0), energy closeness (+0.93)
+
+Coffee Shop Stories - Score: 0.98
+Because: energy closeness (+0.98)
+
+
+=== Deep Intense Rock ===
+
+Storm Runner - Score: 3.99
+Because: genre match (+2.0), mood match (+1.0), energy closeness (+0.99)
+
+Gym Hero - Score: 1.99
+Because: mood match (+1.0), energy closeness (+0.99)
+
+Festival Fever - Score: 0.97
+Because: energy closeness (+0.97)
+
+Iron Cathedral - Score: 0.95
+Because: energy closeness (+0.95)
+
+Bassline Riot - Score: 0.93
+Because: energy closeness (+0.93)
+
+
+=== Edge Case: High Energy + Sad ===
+
+Sunday Porch - Score: 3.40
+Because: genre match (+2.0), mood match (+1.0), energy closeness (+0.40)
+
+Storm Runner - Score: 0.99
+Because: energy closeness (+0.99)
+
+Gym Hero - Score: 0.97
+Because: energy closeness (+0.97)
+
+Festival Fever - Score: 0.95
+Because: energy closeness (+0.95)
+
+Bassline Riot - Score: 0.95
+Because: energy closeness (+0.95)
+```
+
+---
+
 ## Experiments You Tried
 
 (to fill in)
