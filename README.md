@@ -46,7 +46,7 @@ Every song gets a score, then the songs are sorted from highest to lowest and th
 Profile: favorite_genre = pop, favorite_mood = happy, target_energy = 0.8
 
 ```
-Loaded songs: 10
+Loaded songs: 18
 
 Top recommendations:
 
@@ -56,14 +56,14 @@ Because: genre match (+2.0), mood match (+1.0), energy closeness (+0.98)
 Gym Hero - Score: 2.87
 Because: genre match (+2.0), energy closeness (+0.87)
 
+Summer Streets - Score: 2.00
+Because: mood match (+1.0), energy closeness (+1.00)
+
 Rooftop Lights - Score: 1.96
 Because: mood match (+1.0), energy closeness (+0.96)
 
-Night Drive Loop - Score: 0.95
+Bassline Riot - Score: 0.95
 Because: energy closeness (+0.95)
-
-Storm Runner - Score: 0.89
-Because: energy closeness (+0.89)
 ```
 
 ---
